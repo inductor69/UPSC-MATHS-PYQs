@@ -1,0 +1,36 @@
+{
+  "name": "rp-nextjs-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.10",
+    "@heroicons/react": "^2.0.15",
+    "@next/codemod": "^13.1.6",
+    "mathjax-full": "^3.2.2",
+    "mathjax-react": "^2.0.1",
+    "next": "^13.1.6",
+    "next-sitemap": "^3.1.49",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-gtm-module": "^2.0.11",
+    "react-helmet": "^6.1.0",
+    "react-katex": "^3.0.1",
+    "react-latex": "^2.0.0",
+    "sass": "^1.58.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "eslint": "8.33.0",
+    "eslint-config-next": "^13.1.6",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
+  }
+}
