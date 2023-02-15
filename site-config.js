@@ -1,11 +1,11 @@
 const siteConfig = {
-  title: "Rishit's Default Next.js Starter",
+  title: "UPSC MATHS PYQs",
   tagline:
-    'This is a starter template for Next.js projects with Tailwind CSS, SEO, and more.',
-  url: 'https://nextjs-starter.rishit.dev',
+    'This is a collection of UPSC Maths PYQS.',
+  url: 'https://upsc-maths-pyqs.vercel.app/',
   baseUrl: '/',
-  projectName: 'rp-nextjs-starter',
-  organizationName: 'rishitpatel.com',
+  projectName: 'UPSC MATHS PYQs',
+  organizationName: 'meaditya.com',
 };
 
 module.exports = siteConfig;
