@@ -4485,6 +4485,1096 @@
         "Marks": 15
     }
 ],
+"AG": [
+  {
+      "Id": 1,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q1. If $a x^{2}+2 h x y+b y^{2}+2 g x+2 f y+c=0$ represents two intersecting lines, show that the square of the distance of the point of intersection of the straight lines from the origin is $\\frac{c(a+b)-f^{2}-g^{2}}{a b-h^{2}},\\left(a b-h^{2} \\neq 0\\right)$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 2,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q2. Discuss the nature of the conic $16 x^{2}-24 x y+9 y^{2}-104 x-172 y+144=0$ in detail.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 3,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q3. A straight line, always parallel to the plane of $x y$, passed through the curves $x^{2}+y^{2}=a^{2}, z=0$ and $x^{4}=a x, y=0$ prove that the equation of the surface generated is $x^{4} y^{2}=\\left(x^{2}-a z\\right)^{2}\\left(a^{2}-x^{2}\\right)$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 4,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q4. Tangent planes are drawn to the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ through the point $(\\alpha, \\beta, \\gamma)$. Prove that the perpendicular them from the origin generate the cone $(\\propto x, \\beta y, \\gamma z)^{2}=a^{2} x^{2}+b^{2} y^{2}+c^{2} z^{2}$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 5,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q5. Show that the locus of the foot of the perpendicular from the center to the plane through the extremities of three conjugate semi-diameters of the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ is $a^{2} x^{2}+b^{2} y^{2}+c^{2} z^{2}=3\\left(x^{2}+y^{2}+z^{2}\\right)$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 6,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q6. Two conjugate semi-diameters of the ellipse $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ cut the circle $x^{2}+y^{2}=r^{2}$ at $P$ and $Q$. Show that the locus of the middle points of $P Q$ is $a^{2}\\left\\{\\left(x^{2}+y^{2}\\right)^{2}-r^{2} x^{2}\\right\\}-b^{2}\\left\\{\\left(x^{2}+y^{2}\\right)^{2}-r^{2} y^{2}\\right\\}=0$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 7,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q7. If the normal at one of the extremities of latus rectum of the conic $\\frac{1}{r}=1+e \\cos \\theta$, meets the curve again at $\\mathrm{Q}$, show that $S Q=\\frac{l\\left(1+3 e^{2}+e^{4}\\right)}{\\left(1+e^{2}-e^{4}\\right)}$ where $\\mathrm{S}$ is the focus of the conic.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 8,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q8. Through a point $P\\left(x^{\\prime}, y^{\\prime}, z^{\\prime}\\right)$ a plane is drawn at right angles to $O P$ to meet the coordinate axes in $A, B, C$. Prove that the area of the triangle $A B C$ is $\\frac{r^{2}}{2 x \\prime y z^{\\prime}}$, where $\\mathrm{r}$ is the measure of $O P$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 9,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q9. Two spheres of radii $r_{1}$ and $r_{2}$ cut orthogonally. Prove that the area of the common circle is $\\frac{\\pi r_{1}^{2} r_{2}^{2}}{r_{1}^{2}+r_{2}^{2}}$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 10,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q10. Show that a plane through one member of $\\lambda$-system and one member $\\mu$-system is tangent plane to the hyperboloid at the pint of intersection of the two generators.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 11,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q11. If $2 \\phi$ be the angle between the tangents from $P\\left(x_{1}, y_{1}\\right)$ to $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$, prove that $\\lambda_{1} \\cos ^{2} \\varphi+\\lambda_{2} \\sin ^{2} \\varphi=0$ where $\\lambda_{1}, \\lambda_{2}$ are the parameters of two confocals to the ellipse through $P$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 12,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q12. If the normals at the points $\\alpha, \\beta, \\gamma, \\delta$ on the conic $\\frac{1}{r}=1+e \\cos \\theta$ meet at $(\\rho, \\phi)$, prove that $\\alpha+\\beta+\\gamma+\\delta-2 \\phi=$ odd multiple of $\\pi$ radians.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 13,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q13. A variable plane is at a constant distance $p$ from the origin $O$ and meets the axes in $A, B$ and $C$. Show that the locus of the centroid of the tetrahedron $O A B C$ is $\\frac{1}{x^{2}}+\\frac{1}{y^{2}}+\\frac{1}{z^{2}}=\\frac{16}{p^{2}}$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 14,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q14. Find the equations to the generators of hyperboloid, through any point of the principal elliptic section $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1, z=0$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 15,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q15. Planes are drawn through a fixed point $(\\alpha, \\beta, \\gamma)$ so that their sections of the paraboloid $a x^{2}+b y^{2}=2 z$ are rectangular hyperbolas. Prove that they touch the cone $\\frac{\\left(x-\\alpha^{2}\\right)}{b}+\\frac{\\left(y-\\beta^{2}\\right)}{a}+\\frac{\\left(z-\\gamma^{2}\\right)}{a+b}=0$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 16,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q16. Two spheres of radii $r_{1}$ and $r_{2}$ cut orthogonally. Prove that the area of the common circle is $\\frac{\\pi r_{1}^{2} r_{2}^{2}}{r_{1}^{2}+r_{2}^{2}}$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 17,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q17. If the normal at one of the extremities of latus rectum of the conic $\\frac{1}{r}=1+e \\cos \\theta$, meets the curve again at $\\mathrm{Q}$, show that $S Q=\\frac{l\\left(1+3 e^{2}+e^{4}\\right)}{\\left(1+e^{2}-e^{4}\\right)}$ where $\\mathrm{S}$ is the focus of the conic.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 18,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q18. Through a point $P\\left(x^{\\prime}, y^{\\prime}, z^{\\prime}\\right)$ a plane is drawn at right angles to $O P$ to meet the coordinate axes in $A, B, C$. Prove that the area of the triangle $A B C$ is $\\frac{r^{2}}{2 x \\prime y z^{\\prime}}$, where $\\mathrm{r}$ is the measure of $O P$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 19,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q19. Show that a plane through one member of $\\lambda$-system and one member $\\mu$-system is tangent plane to the hyperboloid at the pint of intersection of the two generators.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 20,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q20. Two conjugate semi-diameters of the ellipse $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ cut the circle $x^{2}+y^{2}=r^{2}$ at $P$ and $Q$. Show that the locus of the middle points of $P Q$ is $a^{2}\\left\\{\\left(x^{2}+y^{2}\\right)^{2}-r^{2} x^{2}\\right\\}-b^{2}\\left\\{\\left(x^{2}+y^{2}\\right)^{2}-r^{2} y^{2}\\right\\}=0$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 21,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q21. A variable plane is at a constant distance $p$ from the origin $O$ and meets the axes in $A, B$ and $C$. Through $A, B, C$ the planes are drawn parallel to the coordinate planes. Show that the locus of their point of intersection is given by $x^{-2}+y^{-2}+z^{-2}=p^{-2}$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 22,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q22. Find the equation of the sphere which passes through the points $(1,0,0)$, $(0,1,0),(0,0,1)$ and has the smallest possible radius.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 23,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q23. The generators through a point $P$ on the hyperboloid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ meet the principal elliptic section in two points such that the eccentric angle of one is double that of the other. Show that $P$ lies on the curve $x=\\frac{a\\left(1-3 t^{2}\\right)}{1+t^{2}}$, $y \\frac{b t\\left(3-t^{2}\\right)}{1+t^{2}}, z=c t$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 24,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q24. Let $P$ be a pint on an ellipse with its center at the point $C$. Let $C D$ and $C P$ be two conjugate diameters. If the normal at $P$ cuts $C D$ in $F$, show that $C D . P F$ is a constant and the locus of $F$ is $\\frac{a^{2}}{x^{2}}+\\frac{b^{2}}{y^{2}}=\\left[\\frac{a^{2}-b^{2}}{x^{2}+y^{2}}\\right]^{2}$ where $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ equation of the given ellipse.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 25,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q25. A circle passing through the focus of conic section whose latus rectum is $2 l$ meets the conic in four points whose distances from the focus are $\\gamma_{1}, \\gamma_{2}, \\gamma_{3}$ and $\\gamma_{4}$ and Prove that $\\frac{1}{\\gamma_{1}}+\\frac{1}{\\gamma_{2}}+\\frac{1}{\\gamma_{3}}+\\frac{1}{\\gamma_{4}}=\\frac{2}{l}$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 26,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q26. Find the reflection of the plane $x+y+z-1=0$ in plane $3 x+4 z+1=0$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 27,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q27. Show that the pint of intersection of three mutually perpendicular tangent planes to the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ lies on the sphere $x^{2}+y^{2}+z^{2}=a^{2}+b^{2}+c^{2}$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 28,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q28. Find the equation of the spheres which pass through the circle $x^{2}+y^{2}+z^{2}-4 x-y+3 z+12=0,2 x+3 y-7 z=10$ and touch the plane $x-2 y+2 z=1$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 29,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q29. Let $P=\\left(x^{\\prime}, y^{\\prime}, z^{\\prime}\\right)$ lie on the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$. If the length of the normal chord through $P$ is equal to $4 P G$, where $G$ is the intersection of the normal with the z-plane, then show that $P$ lies on the cone",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 30,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q30. Find the co-ordinates the point of intersection of the generators $\\frac{x}{a}-\\frac{y}{b}-2 \\lambda=$ $0=\\frac{x}{a}-\\frac{y}{b}-\\frac{z}{\\lambda}$ and $\\frac{x}{a}+\\frac{y}{b}-2 \\mu=0=\\frac{x}{a}-\\frac{y}{b}-\\frac{z}{\\mu}$ of the surface $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=2 z$. Hence show that the locus of the points of intersection of perpendicular generators curves of intersection of the surface with the plane $2 z+\\left(a^{2}-b^{2}\\right)=0$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 31,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q31. Find the smallest sphere (i.e. the sphere of smallest radius) which touches the lines $\\frac{x-5}{2}=\\frac{y-2}{-1}=\\frac{z-5}{-1}$ and $\\frac{x+4}{-3}=\\frac{y+5}{-6}=\\frac{z-4}{4}$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 32,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q32. Show that the plane $a x+b y+c z+d=0$ divides the join of $P_{1} \\equiv\\left(x_{1}, y_{1}, z_{1}\\right)$, $P_{2} \\equiv\\left(x_{2}, y_{2}, z_{2}\\right)$ in the ratio $-\\frac{a x_{1}+b y_{1}+c z_{1}+d}{a x_{2}+b y_{2}+c z_{2}+d}$. Hence show that the planes $U \\equiv a x+b y+c z+d=0=a^{\\prime} x+b^{\\prime} y+c^{\\prime} z+d^{\\prime} \\equiv V, U+\\lambda V=0$ and $U-\\lambda V=0$ divide any transversal harmonically.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 33,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q33. Find the locus of the pole of a chord of the $\\operatorname{conic} \\frac{1}{r}=1+e \\cos \\theta$ which subtends a constant angle $2 \\alpha$ at the focus.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 34,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q34. If $P$ and $D$ are ends of a pair of semi-conjugate diameters of the ellipse $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ show that the tangents at $P$ and $D$ meet on the ellipse $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=2$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 35,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q35. Find the equation of the cylinder whose generators touch the sphere $x^{2}+y^{2}+z^{2}=9$ and are perpendicular to the plane $x-y-3 z=5$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 36,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q36. Find the equations to the planes bisecting the angles between the planes $2 x-y-2 z=0$ and $3 x+4 y+1=0$ and specify the on $e$ which bisects the acute angle.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 37,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q37. Find the equation to the common conjugate diameters of the conics $x^{2}+4 x y+6 y^{2}=1$ and $2 x^{2}+6 x y+9 y^{2}=1$.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 38,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q38. Reduce the equation $x^{2}+y^{2}+z^{2}-2 x y-2 y z+2 z x+x-y-2 z+6=0$ into canonical form and determine the nature of the quadric.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 39,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q39. Find the equation of the sphere through the circle $x^{2}+y^{2}+z^{2}=4$, $x+2 y-z=2$ and the point $(1,-1,1)$.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 40,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q40. A variable straight line always intersects the lines $x=c, y=0 ; y=c, z=0$; $z=c, x=0$. Find the equations to its locus.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 41,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q41. Show that the locus of mid-points of chords of the cone $a x^{2}+b y^{2}+c z^{2}+2 h x y+2 f y z+2 g z x=0$ drawn parallel to the line $\\frac{x}{l}=\\frac{y}{m}=\\frac{z}{n}$ is the plane",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 42,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q42. Show that the equation $x^{2}-5 x y+y^{2}+8 x-20 y+15=0$ represents a hyperbola. Find the coordinates of its center and the length of its real semi-axes.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 43,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q43. Find the shortest distance between the axis of $\\mathrm{z}$ and the lines $a x+b y+c z+d=0, a^{\\prime} x+b^{\\prime} y+c^{\\prime} z+d^{\\prime}=0$.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 44,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q44. Find the equation of the circle circumscribing the triangle formed by the points $(a, 0,0),(0, b, 0),(0,0, c)$. Obtain also the coordinates of the center of the circle.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 45,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q45. Find the locus of equal conjugate diameters of the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 46,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q46. Prove that $5 x^{2}+5 y^{2}+8 z^{2}-2 x y+8 y z+8 z x+12 x-12 y+6=0$ represents a cylinder whose cross-section is an ellipse of eccentricity $\\frac{1}{\\sqrt{2}}$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 47,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q47. If $T P, T Q$ and $T^{1} P^{1}, T^{1} Q^{1}$ all lie one a conic.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 48,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q48. Show that the equation $9 x^{2}-16 y^{2}-18 x-32 y-151=0$ represents a hyperbola. Obtain its eccentricity and foci.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 49,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q49. Find the co-ordinates of the center of the sphere inscribed in the tetrahedron formed by the plane $x=0, y=0, z=0$ and $x+y+z=a$.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 50,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q50. Tangents are drawn from any point on the ellipse $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ to the circle $x^{2}+y^{2}=r^{2}$. Show that the chords of contact are tangents to the ellipse $a^{2} x^{2}+b^{2} y^{2}=r^{2}$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 51,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q51. Consider a rectangular parallelepiped with edges $a, b$ and $c$. Obtain the shortest distance between one of its diagonals and an edge which does not intersect this diagonal.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 52,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q52. Show that the feed of the six normals drawn from any point $(\\alpha, \\beta, \\gamma)$ to the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ lie on the cone $\\frac{a^{2}\\left(b^{2}-c^{2}\\right) \\alpha}{x}+\\frac{b^{2}\\left(c^{2}-a^{2}\\right) \\beta}{y}+\\frac{c^{2}\\left(a^{2}-b^{2}\\right) \\gamma}{z}=0$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 53,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q53. A variable plane $\\frac{x}{a}+\\frac{y}{b}+\\frac{z}{c}=0$ is parallel to the plane meets the co-ordinate axes of $A, B$ and $C$. Show that the circle $A B C$ lies on the conic $y z\\left(\\frac{c}{b}+\\frac{b}{c}\\right)+z x\\left(\\frac{c}{a}+\\frac{a}{c}\\right)+x y\\left(\\frac{a}{b}+\\frac{b}{a}\\right)=0$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 54,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q54. A variable plane remains at a constant distance unity from the point $(1,0,0)$ and cuts the coordinate axes at $A, B$ and $C$, find the locus of the center of the sphere passing through the origin and the point and the point $A, B$ and $C$.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 55,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q55. Find the equation of the two straight lines through the point $(1,1,1)$ that intersect the line $x-4=4(y-4)=2(z-1)$ at an angle of $60^{\\circ}$",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 56,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q56. Find the volume of the tetrahedron formed by the four plane",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 57,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q57. A sphere of constant radius $r$ passes through the origin $O$ and cuts the coordinate axes at $A, B$ and $C$. Find the locus of the foot of the perpendicular from $O$ to the plane $A B C$.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 58,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q58. Find the equations of the lines of intersection of the plane $x+7 y-5 z=0$ and the cone $3 x y+14 z x-30 x y=0$.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 59,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q59. Find the equations of the lines of shortest distance between the lines: $y+z=1, x=0$ and $y+z=1, x=0$ as the intersection of two planes.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 60,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q60. Prove that the locus of the foot of the perpendicular drawn from the vertex on a tangent to the parabola $y^{2}=4 a x$ is $(x+a) y^{2}+x^{3}=0$",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 61,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q61. Find the equations of the tangent planes to the sphere $x^{2}+y^{2}+z^{2}-4 x+2 y-6 z=0$, which are to the parallel $2 x+y-z=4$",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 62,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q62. Find the locus of the middle points of the chords of the rectangular hyperbola $x^{2}-y^{2}=a^{2}$ which touch the parabola $y^{2}=4 a x$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 63,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q63. Prove that the locus of a line which meets the lines $y=\\pm m x, z=\\pm c$ and the circle $x^{2}-y^{2}=a^{2}, z=0$ is $c^{2} m^{2}(c y-m z x)^{2}+c^{2}(y z-c m x)^{2}=a^{2} m^{2}\\left(z-c^{2}\\right)^{2}$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 64,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q64. Prove that the lines of intersection of pairs of tangent planes to $a x^{2}+b y^{2}+c z^{2}=0$ which touch along perpendicular generators lie on the cone $a^{2}(b+c) x^{2}+b^{2}(c+a) y^{2}+c^{2}(a+b) z^{2}=0$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 65,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q65. Tangent planes are drawn to the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ through the point $(\\alpha, \\beta, \\gamma)$. Prove that the perpendiculars to them through the origin generate the cone $(\\alpha x+\\beta y+\\gamma z)^{2}=a^{2} x^{2}+b^{2} y^{2}+c^{2} z^{2}$.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 66,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q66. If normals at the points of an ellipse whose eccentric angles are $\\alpha, \\beta, \\gamma$ and $\\delta$ in a point then show that $\\sin (\\beta+\\gamma)+\\sin (\\gamma+\\alpha)+\\sin (\\alpha+\\beta)=0$.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 67,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q67. A square $\\mathrm{ABCD}$ having each diagonal $\\mathrm{AC}$ and $\\mathrm{BD}$ of length $2 \\mathrm{a}$ is folded along the diagonal $\\mathrm{AC}$ so that the planes $\\mathrm{DAC}$ and $\\mathrm{BAC}$ are at right angle. Find the shortest distance between $\\mathrm{AB}$ and DC.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 68,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q68. A plane is drawn through the line $x+y=1, z=0$ to make an angle $\\sin ^{-1} \\frac{1}{3}$ with plane $x+y+z=5$. Show that two such planes can be drawn. Find their equations and the angle between them.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 69,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q69. Show that the locus of the centers of sphere of a co-axial system is a straight line.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 70,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q70. Obtain the equation of a right circular cylinder on the circle through the points $(a, 0,0),(0, b, 0),(0,0, c)$ as the guiding curve.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 71,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q71. Reduce the following equation to canonical form and determine which surface is represented by it:",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 72,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q72. If $P S P^{\\prime}$ and $Q S Q^{\\prime}$ are the two perpendicular focal chords of a conic $\\frac{1}{r}=1+e \\cos \\theta$, Prove that $\\frac{1}{S P \\cdot S P^{\\prime}}+\\frac{1}{S Q \\cdot S Q^{\\prime}}$ is constant.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 73,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q73. Find the equation of the sphere which touches the plane $3 x+2 y-z+2=0$ at the point $(1,-2,-)$ and cuts orthogonally the sphere $x^{2}+y^{2}+z^{2}-4 x+6 y+4=0$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 74,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q74. Show that the plane $a x+b y+c z=0$ cuts the cone $x y+y z+z x=0$ in perpendicular lines, if $\\frac{1}{a}+\\frac{1}{b}+\\frac{1}{c}=0$ Q75. If the plane $l x+m y+n z=p$ passes through the extremities of three conjugate semi-diameters of the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ prove that $a^{2} l^{2}+b^{2} m^{2}+c^{2} n^{2}=3 p^{2}$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 75,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q76. A pair of tangents to the conic $a x^{2}+b y^{2}=1$ intercepts a constant distance $2 k$ on the $y$ - axis. Prove that the locus of their point of intersection is the conic $a x^{2}\\left(a x^{2}+b y^{2}-1\\right)=b k^{2}\\left(a x^{2}-1\\right)^{2}$",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 76,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q77. Show that the length of the shortest distance between the line $z=\\tan \\alpha, y=0$ and any tangent to the ellipse $x^{2} \\sin ^{2} \\alpha+y^{2}=a^{2}, z=0$ is constant.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 77,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q78. Find the equation of the sphere inscribed in the tetrahedron whose faces are $x=0, y=0, z=0$ and $2 x+3 y+6 z=6$",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 78,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q79. Find the focus of the point which moves so that its distance from the plane $x+y-z=1$ is twice its distance from the line $x=-y=z$.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 79,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q80. Show that the spheres $x^{2}+y^{2}+z^{2}-x+z-2=0$ and $3 x^{2}+3 y^{2}-8 x-10 y+8 z+14=0$ cut orthogonally. Find the center and radius of their common circle",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 80,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q81. A line with direction ratios 2, 7, $-5$ is drawn to intersect the lines $\\frac{x}{1}=\\frac{y-1}{2}=\\frac{z-2}{4}$ and $\\frac{x-11}{3}=\\frac{y-5}{-1}=\\frac{z}{1}$. Find the coordinate of the points of intersection and the length intercepted on it.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 81,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q82. Show that the plane $2 x-y+2 z=0$ cuts the cone $x y+y z+z x=0$ in perpendicular lines.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 82,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q83. Show that the feet of the normals from the point $P(\\alpha, \\beta, \\gamma), \\beta \\neq 0$ on the paraboloid $x^{2}+y^{2}=4 z$ lie on the sphere",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 83,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q84. The plane $x-2 y+3 z=0$ is rotated through a right angle about its line of intersection with the plane $2 x+3 y-4 z-5=0$; find the equation of the plane in its new position.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 84,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q85. Find the equations (in symmetric form) of the tangent line to the sphere $x^{2}+y^{2}+z^{2}+5 x-7 y+2 z-8=0,3 x-2 y+4 z=0$ at the point $(-3,5,4)$",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 85,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q86. A sphere $S$ has points $(0,1,0),(3,-5,2)$ at opposite ends of a diameter. Find the equation of the sphere having the intersection of the sphere $S$ with the plane $5 x-2 y+4 z+7=0$ as a great circle.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 86,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q87. Show that the enveloping cylinders of the ellipsoid $a^{2} x^{2}+b^{2} y^{2}+c^{2} z^{2}=1$ with generators perpendicular to $z$ - axis meet the plane $z=0$ in parabolas.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 87,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q88. A line is drawn through a variable point on the ellipse $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1, z=0$ to meet two fixed lines $y=m x, z=c$ and $y=-m x, z=-c$. Find the locus of the line.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 88,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q89. Find the equation of the sphere having its center on the plane $4 x-5 y-z=3$ and passing through the circle $x^{2}+y^{2}+z^{2}-12 x-3 y+4 z+8=0$, $3 x+4 y-5 z+3=0$",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 89,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q90. Prove that the normals from the point $(\\alpha, \\beta, \\gamma)$ to the paraboloid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=2 z$ lie on the cone $\\frac{\\alpha}{x-\\alpha}+\\frac{\\beta}{y-\\beta}+\\frac{a^{2}-b^{2}}{z-\\gamma}=0$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 90,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q91. Find the vertices of the skew quadrilateral formed by the four generators of the hyperboloid $\\frac{x^{2}}{4}+y^{2}-z^{2}=49$, passing through $(10,5,1)$ and $(14,2,-2)$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 91,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q92. Show that every sphere through the circle $x^{2}+y^{2}-2 a x+r^{2}=0, z=0$ cuts orthogonally every sphere through the circle $x^{2}+z^{2}=r^{2}, y=0$.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 92,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q93. Show that the plane $3 x+4 y+7 z+\\frac{5}{2}=0$ touches the paraboloid $3 x^{2}+4 y^{2}=10 z$ and find the point of contact.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 93,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q94. Show that the plane $x+y-2 z=3$ cuts the sphere $x^{2}+y^{2}+z^{2}-x+y=2$ in a circle of radius 1 and find the equation of the sphere which has this circle as a great circle.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 94,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q95. Find the equation of the straight line through the point $(3,1,2)$ to intersect the straight line $x+4=y+1=2(z-1)$ and parallel to the plane $4 x+y+5 z=0$",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 95,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q96. Show that the equation of the sphere which touches the sphere $4\\left(x^{2}+y^{2}+z^{2}\\right)+10 x-25 y-2 z=0$ at the point $(1,2,-2)$ and the passes through the point $(-1,0,0)$ is $x^{2}+y^{2}+z^{2}+2 x-6 y+1=0$.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 96,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q97. Find the points on the sphere $x^{2}+y^{2}+z^{2}=4$ that are closest to and farthest from the point $(3,1,-1)$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 97,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q98. Three points $P, Q, R$ are taken on the ellipsoid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ so that lines joining to $P, Q$ and $R$ to origin are mutually perpendicular. Prove that plane $P Q R$ touches a fixed sphere.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 98,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q99. Show that generators through any one of the ends of an equi-conjugate diameter of the principal elliptic section of the hyperboloid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}+\\frac{z^{2}}{c^{2}}=1$ are inclined to each other at an angle of $60^{\\circ}$ if $a^{2}+b^{2}=6 c^{2}$. Find also the condition for the generators to be perpendicular to each other.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 99,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q100. Show that the cone $y z+x z+x y=0$ cuts the sphere $x^{2}+y^{2}+z^{2}=\\mathrm{a}^{2}$ in two equal circles, and find their area.",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 100,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q101.Prove that two of the straight lines represented by the equation $x^{3}+b x^{2} y+c x y^{2}+y^{3}=0$ will be at right angles, if $b+c=-2$",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 101,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q102. A variable plane is parallel to the plane $\\frac{x}{a}+\\frac{y}{b}+\\frac{z}{c}=0$ and meets the axes in $A, B, C$ respectively. Prove that circle $A, B, C$ lies on the cone $y z\\left(\\frac{b}{c}+\\frac{c}{b}\\right)+z x\\left(\\frac{c}{a}+\\frac{a}{c}\\right)+x y\\left(\\frac{a}{b}+\\frac{b}{a}\\right)=0$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 102,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q103. Show that locus of a point from which three mutually perpendicular tangent lines can be drawn to the paraboloid $x^{2}+y^{2}+2 z^{2}=0$ is $x^{2}+y^{2}+4 z=1$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 103,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q104. Find the equation of the plane which passes through the points $(0,1,1)$ and $(2,0,-1)$ and is parallel to the line joining the points $(-1,1,-2),(3,-2,4)$. Find also the distance between the line and the plane.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 104,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q105. A sphere S has points $(0,1,0),(3,-5,2)$ at opposite ends of a diameter. Find the equation of the sphere having the intersection of the sphere $S$ with the plane $5 x-2 y+4 z+7=0$ as a great circle.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 105,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q106. Show that three mutually perpendicular tangent lines can be drawn to the sphere $x^{2}+y^{2}+z^{2}=r^{2}$ from any point on the sphere $2\\left(x^{2}+y^{2}+z^{2}\\right)=3 r^{2}$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 106,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q107. A cone has for its guiding curve the circle $x^{2}+y^{2}+2 a x+2 b y=0, z=0$ and passes through a fixed point $(0,0, c)$. If the section of the cone by the plane $y=0$ is a rectangular hyperbola, prove that vertex lies one the fixed circle $x^{2}+y^{2}+2 a x+2 b y=0,2 a x+2 b y+c z=0$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 107,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q108. A variable generator meets two generators of the system through the extremities $B$ and $B^{\\prime}$ of the minor axis of the principal elliptic section of the hyperboloid $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}-c^{2} z^{2}=1$ in $P$ and $P^{\\prime}$ Prove that $B P . P^{\\prime} B^{\\prime}=a^{2}+c^{2}$",
+      "WordLimit": 150,
+      "Marks": 20
+  },
+  {
+      "Id": 108,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q109. Examine whether the plane $x+y+z=0$ cuts the cone $y z+z x+x y=0$ in perpendicular lines.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 109,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q110. Find the co-ordinates of the points on the sphere $x^{2}+y^{2}+z^{2}-4 x+2 y=4$, the tangent planes at which are parallel to the plane $2 x-y+2 z=1$",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 110,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q111. Prove that equation $a x^{2}+b y^{2}+c z^{2}+2 u x+2 v y+2 w z+d=0$ represents a cone if $\\frac{u^{2}}{a}+\\frac{v^{2}}{b}+\\frac{w^{2}}{c}=d$",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 111,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q112. Show that the lines drawn from the origin parallel to the normals to the central Conicoid $a x^{2}+b y^{2}+c z^{2}=1$, at its points of intersection with the plane $l x+m y+n z=p$ generate the cone $p^{2}\\left(\\frac{x^{2}}{a}+\\frac{y^{2}}{b}+\\frac{z^{2}}{c}\\right)=\\left(\\frac{l x}{a}+\\frac{m y}{b}+\\frac{n z}{c}\\right)^{2}$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 112,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q113. Find the equations of the two generating lines through any point $(\\operatorname{acos} \\theta, b \\cos \\theta, 0)$ of the principal elliptic section $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1, z=0$ of the hyperboloid by the plane $z=0$.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 113,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q114. Find what positive value of $a$, the plane $a x-2 y+z+12=0$ touches the sphere, $x^{2}+y^{2}+z^{2}-2 x-4 y+2 z-3=0$ and hence find the point of contact. Q115.If $6 x=3 y=2 z$ represents one of the mutually perpendicular generators of the cone $5 y z-8 z x-3 x y=0$ then obtain the equations of the other two generators.",
+      "WordLimit": 150,
+      "Marks": 13
+  },
+  {
+      "Id": 114,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q116. Obtain the equation of the plane passing through the points $(2,3,1)$ and $(4,-5,3)$ parallel to $x$ - axis.",
+      "WordLimit": 150,
+      "Marks": 6
+  },
+  {
+      "Id": 115,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q117. Verify if the lines: $\\frac{x-a+d}{\\alpha-\\delta}=\\frac{y-a}{\\alpha}=\\frac{z-a-d}{\\alpha+\\delta}$ and $\\frac{x-b+c}{\\beta-\\gamma}=\\frac{y-b}{\\beta}=\\frac{z-b-c}{\\beta+\\gamma}$ are coplanar. If yes, find the equation of the plane in which they lie.",
+      "WordLimit": 150,
+      "Marks": 7
+  },
+  {
+      "Id": 116,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q118. Two perpendicular tangent planes to the paraboloid $x^{2}+y^{2}=2 z$ intersect in a straight line in the plane $x=0$. Obtain the curve to which this straight line touches.",
+      "WordLimit": 150,
+      "Marks": 13
+  },
+  {
+      "Id": 117,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q119.Find the locus of the point of intersection of three mutually perpendicular tangent planes to the Conicoid $a x^{2}+b y^{2}+c z^{2}=1$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 118,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q120.Find the equation of the sphere which passes though the circle $x^{2}+y^{2}=4$; $\\mathrm{z}=0$ and is cut by the plane $x+2 y+2 z=0$ in a circle of radius 3 .",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 119,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q121.Find the shortest distance between the lines $\\frac{x-1}{2}=\\frac{y-2}{4}=z-3$ and $y-m x=z=0$ for what value of will the two lines intersect?",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 120,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q122. Find the surface generated by a line which intersects the line $y=a=z$, $x+3 z=a=y+z$ and parallel to the plane $x+y=0$",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 121,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q123. Show that the cone $3 y z-2 z x-2 x y=0$ has an infinite set of three mutually perpendicular generators. If $\\frac{x}{1}=\\frac{y}{1}=\\frac{z}{z}$ is a generator belonging to one such set, Find the other two.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 122,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q124.Find the equation of the tangent at the point $(1,1,1)$ to the Conicoid $3 x^{2}-y^{2}=2 z$",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 123,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q125.Find the shortest distance between the skew the lines: $\\frac{(x-3)}{3}=\\frac{8-y}{1}=\\frac{z-3}{1}$ and $\\frac{x-3}{-3}=\\frac{y+7}{2}=\\frac{z-6}{4}$",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 124,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q126. A plane through a fixed point $(a, b, c)$ and cuts the axes at the points $A, B, C$ respectively. Find the locus of the center of the sphere which passes through the origin $O$ and $A, B, C$.",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 125,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q127. Show that the plane $2 x-2 y+z+12=0$ touches the sphere $x^{2}+y^{2}+z^{2}-2 x-4 y+2 z-3=0$ find the point of contact.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 126,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q128. Find the locus of the points of intersection of three mutually perpendicular tangent planes to $a x^{2}+b y^{2}+c z^{2}=1$.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 127,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q129. Reduce the following equation to the standard form and hence determine the nature of the Conicoid: $x^{2}+y^{2}+z^{2}-y z-\\mathrm{zx}-\\mathrm{xy}-3 x-6 y-9 z+21=0$",
+      "WordLimit": 150,
+      "Marks": 15
+  },
+  {
+      "Id": 128,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q130.Find the projection of the straight line $\\frac{x-1}{2}=\\frac{y-1}{3}=\\frac{z+1}{-1}$ on the plane $x+y+2 z=6$ Q131.Find the shortest distance between the line",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 129,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q132.Find the equation of the sphere is xyz-plane passing through the points $(0,0,0),(0,1,-1),(-1,2$,$) and (1,2,3)$.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 130,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q133. Find the equations to the generation lines of the paraboloid $(x+y+z)(2 x+y-z)=6 z$ which pass through the point $(1,1,1)$.",
+      "WordLimit": 150,
+      "Marks": 13
+  },
+  {
+      "Id": 131,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q134. Find the equation of the cone with $(0,0,1)$ as the vertex and $2 x^{2}-y^{2}=4, z=0$ as the guiding curve.",
+      "WordLimit": 150,
+      "Marks": 13
+  },
+  {
+      "Id": 132,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q135.Find the question of the plane parallel to $3 x-y+3 z=8$ and passing through the point $(1,1,1)$.",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 133,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q136. Show that the line",
+      "WordLimit": 150,
+      "Marks": 12
+  },
+  {
+      "Id": 134,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q137. The plane $x+2 y+3 z=12$ cuts the axes of coordinates in $A, B, C$. Find the equations of the circle circumscribing the triangle $A B C$.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 135,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q138.Prove that the plane $z=0$ cuts the enveloping cone of the sphere $x^{2}+y^{2}+z^{2}=11$ which has the vertex at $(2,4,1)$ in a rectangular hyperbola.",
+      "WordLimit": 150,
+      "Marks": 10
+  },
+  {
+      "Id": 136,
+      "Paper": "Analytical Geometry",
+      "Year": 1992,
+      "Question": "Q139.Prove that, is general, three normal can be down from a given point to the paraboloid $x^{2}+y^{2}=2 a z$, but if the point lies on the surface",
+      "WordLimit": 150,
+      "Marks": 15
+  }
+],
   "CALCULUS": [
     {
       "Id": 1,

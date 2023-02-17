@@ -189,6 +189,10 @@ if (typeof window !== "undefined") {
         dataSize = data.LA.length;
         filterdata = data.LA;
         break;
+        case 3:
+          dataSize = data.AG.length;
+          filterdata = data.AG;
+          break;
 
       default:
         dataSize = data.CALCULUS.length;
@@ -279,6 +283,10 @@ if (typeof window !== "undefined") {
       paper: "Linear Algebra",
       state: 0,
     },
+    {
+      paper: "Analytical Geometry",
+      state: 0,
+    },
   ];
 
   papertags.forEach((element) => {
@@ -299,6 +307,9 @@ if (typeof window !== "undefined") {
               break;
             case "Linear Algebra":
               papercode = 2;
+              break;
+              case "Analytical Geometry":
+              papercode = 3;
               break;
 
             default:
@@ -713,6 +724,9 @@ const Home = () => {
               <div className="paper-tags">
                 <p>Linear Algebra</p>
               </div>
+              <div className="paper-tags">
+                <p>Analytical Geometry</p>
+              </div>
 
             </div>
           </div>
@@ -771,6 +785,12 @@ const Home = () => {
                     <span>Use this button to Search</span>
                   </div>
                 </div>
+                <div className="flex flex-wrap justify-center items-center  mt-[1rem]">
+                 
+                  <div className="w-auto p-1">
+                    <span>Click Search to display all questions.</span>
+                  </div>
+                </div>
                 <button
                   className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   onClick={() => setShowModal(false)}
@@ -781,33 +801,15 @@ const Home = () => {
             </div>
           )}
 
-          <footer class="p-4 bg-white  shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              © 2023 Lemon™. All Rights Reserved.
-            </span>
-            <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-              <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6 ">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">
-                  Licensing
-                </a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </footer>
+<footer class="p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+    © 2023 Lemon™. All Rights Reserved.
+  </span>
+  <div class="flex flex-wrap items-center justify-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+      <a target="_blank" href="https://www.meaditya.com" class="hover:underline" rel="noreferrer">Developed with ❤️ by Aditya K. ️</a>
+  </div>
+</footer>
+
         </div>
       </section>
     </>
