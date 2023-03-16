@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.10",
     "@heroicons/react": "^2.0.15",
     "@next/codemod": "^13.1.6",
     "mathjax-full": "^3.2.2",
@@ -23,8 +22,7 @@
     "react-gtm-module": "^2.0.11",
     "react-helmet": "^6.1.0",
     "react-katex": "^3.0.1",
-    "react-latex": "^2.0.0",
-    "sass": "^1.58.0"
+    "react-latex": "^2.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

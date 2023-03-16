@@ -189,15 +189,12 @@ if (typeof window !== "undefined") {
         dataSize = data.LA.length;
         filterdata = data.LA;
         break;
-        case 3:
-          dataSize = data.AG.length;
-          filterdata = data.AG;
-          break;
-
-      default:
-        dataSize = data.CALCULUS.length;
-        filterdata = data.CALCULUS;
+      case 3:
+        dataSize = data.AG.length;
+        filterdata = data.AG;
         break;
+
+ 
     }
     // console.log(dataSize);
     let ques = "";
@@ -257,7 +254,6 @@ if (typeof window !== "undefined") {
 
   const filtertags = document.querySelectorAll(".filter-tags");
   const papertags = document.querySelectorAll(".paper-tags");
-  papertags[0].classList.add("paper-tags-clicked");
 
   filtertags.forEach((element) => {
     element.addEventListener("click", function () {
@@ -277,7 +273,7 @@ if (typeof window !== "undefined") {
   let paperfilters = [
     {
       paper: "Calculus",
-      state: 1,
+      state: 0,
     },
     {
       paper: "Linear Algebra",
@@ -300,7 +296,7 @@ if (typeof window !== "undefined") {
       });
       paperfilters.forEach((item) => {
         if (item.paper == element.innerText) {
-          item.state = 1;
+          item.state = 0;
           switch (item.paper) {
             case "Calculus":
               papercode = 1;
@@ -308,11 +304,10 @@ if (typeof window !== "undefined") {
             case "Linear Algebra":
               papercode = 2;
               break;
-              case "Analytical Geometry":
+            case "Analytical Geometry":
               papercode = 3;
               break;
 
-            default:
           }
         } else {
           item.state = 0;
@@ -399,16 +394,132 @@ const Home = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [data, setData] = useState([]);
+  const years = [
+    1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001,
+    2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+    2014, 2015, 2016, 2017, 2018, 2019,
+  ];
+
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("upsc.json")
+    fetch("/upsc.json")
       .then((response) => response.json())
-      .then((jsonData) => {
-        setData(jsonData);
-        console.log(jsonData);
-      });
+      .then((data) => setData(data))
+      .catch((error) => console.error(error));
   }, []);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
+
+  const toggleSectionVisibility = () => {
+    setIsSectionVisible(!isSectionVisible);
+  };
+
+  const [laData, setLaData] = useState(null);
+  const [agData, setAgData] = useState(null);
+  const [calData, setCalData] = useState(null);
+  const [odeData, setOdeData] = useState(null);
+  const [sdData, setSdData] = useState(null);
+
+  const handleLAButtonClick = () => {
+    const laData = data.LA.filter((item) => item.Paper === "Linear Algebra");
+    setLaData(laData);
+    setAgData(null);
+    setCalData(null);
+    setOdeData(null);
+    setSdData(null);
+  };
+  const handleAGButtonClick = () => {
+    const agData = data.AG.filter(
+      (item) => item.Paper === "Analytical Geometry"
+    );
+    setAgData(agData);
+    setLaData(null);
+    setCalData(null);
+    setOdeData(null);
+    setSdData(null);
+  };
+
+  const handleCALButtonClick = () => {
+    const calData = data.CALCULUS.filter((item) => item.Paper === "Calculus");
+    setCalData(calData);
+    setLaData(null);
+    setAgData(null);
+    setOdeData(null);
+    setSdData(null);
+  };
+
+  const handleSdButtonClick = () => {
+    const sdData = data.SD.filter((item) => item.Paper === "Static & Dynamics");
+    setSdData(sdData);
+    setLaData(null);
+    setAgData(null);
+    setCalData(null);
+    setOdeData(null);
+  };
+  const handleODEButtonClick = () => {
+    const odeData = data.ODE.filter((item) => item.Paper === "Ordinary Differential Equations");
+    setOdeData(odeData);
+    setLaData(null);
+    setAgData(null);
+    setCalData(null);
+    setSdData(null);
+  };
+
+  function renderData(data) {
+    return (
+      <div>
+        {
+        data.filter((item) => selectedYears.includes(item.Year))
+      
+        .map((item) => (
+          <div key={item.Id}>
+    <div className="items-center px-2 md:px-4 sm:py-8 m-auto">
+      <div
+        className="flex flex-col sm:flex-row pb-3 justify-center space-y-4 sm:space-y-0 sm:space-x-1 xl:space-x-6 mx-8 sm:mx-0">
+        <div className="w-full p-2 lg:w-2/3 md:w-2/3 bg-[#D9D9D9]  rounded-md shadow-sm">
+          <div className="flex flex-col">
+            <div className="flex flex-row items-center justify-between px-4 py-2">
+              <div className="flex text-base text-gray-600">{`Year: ${item.Year}`}</div>
+
+            </div>
+            <div className="px-4">
+              <button className="mt-1 text-xs px-2 py-1 text-gray-300 bg-gray-900">{item.Paper }</button>
+              <h2 className="my-3 font-bold text-xl text-gray-800"><Latex>{item.Question }</Latex></h2>
+              <div className="flex flex-row items-center justify-between w-full mb-2">
+                <div className="text-gray-800 font-medium text-sm">{`Marks: ${item.Marks}`}
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+const [selectedYears, setSelectedYears] = useState([]);
+
+
+const handleYearSelect = (year) => {
+  setSelectedYears((prevYears) => {
+    const newYears = prevYears.includes(year)
+      ? prevYears.filter((y) => y !== year)
+      : [...prevYears, year];
+    return newYears;
+  });
+};
+
+const handleSelectAllYears = () => {
+  const years = [];
+  for (let year = 1992; year <= 2019; year++) {
+    years.push(year);
+  }
+  setSelectedYears(years);
+};
 
   return (
     <>
@@ -433,37 +544,51 @@ const Home = () => {
             <div className="w-auto">
               <div className="flex flex-wrap items-center">
                 <div className="w-auto mr-14">
-                  <a href="#">
-                    <img src="flaro-assets/logos/flaro-logo-black.svg" alt="" />
-                  </a>
                 </div>
               </div>
             </div>
             <div className="w-auto">
               <div className="flex flex-wrap items-center">
-                <div className="w-auto hidden lg:block">
-                  <ul className="flex items-center mr-16">
-                    <li className="mr-9 font-medium hover:text-gray-700">
-                      <a href="#">Features</a>
-                    </li>
-                    <li className="mr-9 font-medium hover:text-gray-700">
-                      <a href="#">Solutions</a>
-                    </li>
-                    <li className="mr-9 font-medium hover:text-gray-700">
-                      <a href="#">Resources</a>
-                    </li>
-                    <li className="font-medium hover:text-gray-700">
-                      <a href="#">Pricing</a>
-                    </li>
-                  </ul>
+                <div className="w-auto hidden lg:block m-2">
+                  <div className="inline-block">
+                    <button
+                      onClick={() => setShowModal(true)}
+                      className="py-3 px-5 w-full font-semibold border border-gray-300 hover:border-gray-400 rounded-xl focus:ring focus:ring-gray-50 bg-transparent hover:bg-gray-100 transition ease-in-out duration-200"
+                      type="button"
+                    >
+                      <div className="flex flex-wrap justify-center items-center -m-1">
+                        <div className="w-auto p-1">
+                          <svg
+                            width={22}
+                            height={22}
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={1.5}
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                            />
+                          </svg>
+                        </div>
+                        <div className="w-auto p-1">
+                          <span>How to Use</span>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                 </div>
                 <div className="w-auto hidden lg:block">
                   <div className="inline-block">
                     <button
-                      className="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
+                      className="py-3 px-7 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
                       type="button"
                     >
-                      Try 14 Days Free Trial
+                      Login
                     </button>
                   </div>
                 </div>
@@ -576,14 +701,14 @@ const Home = () => {
         <div className="overflow-hidden pt-16">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap -m-8">
-              <div className="w-full md:w-1/2 p-8">
-                <p className="mb-6 text-6xl md:text-8xl lg:text-10xl font-bold font-heading md:max-w-xl lg:leading-[6.5rem]">
-                  Filter through UPSC Maths PYQs.
+              <div className="p-8">
+                <p className="mb-6 text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold font-heading  lg:leading-[6.5rem]">
+                  UPSC Maths Optional Previous Year Questions
                 </p>
 
-                <p className="mb-11 text-lg text-gray-900 font-medium md:max-w-md  ">
-                  Questions asked in UPSC Civil Service Examination | Mains -
-                  Written
+                <p className="mb-11 text-lg text-gray-900 font-medium  ">
+                  Easily <b>find and filter</b> through PYQs of UPSC Maths
+                  Optional
                 </p>
                 <div className="flex flex-wrap -m-2.5 mb-20">
                   <div className="w-full md:w-auto p-2.5">
@@ -594,39 +719,6 @@ const Home = () => {
                         type="button"
                       >
                         Search Now
-                      </button>
-                    </div>
-                  </div>
-                  <div className="w-full md:w-auto p-2.5">
-                    <div className="block">
-                      <button
-                        onClick={() => setShowModal(true)}
-                        className="py-4 px-9 w-full font-semibold border border-gray-300 hover:border-gray-400 rounded-xl focus:ring focus:ring-gray-50 bg-transparent hover:bg-gray-100 transition ease-in-out duration-200"
-                        type="button"
-                      >
-                        <div className="flex flex-wrap justify-center items-center -m-1">
-                          <div className="w-auto p-1">
-                            <svg
-                              width={25}
-                              height={25}
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth={1.5}
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
-                              />
-                            </svg>
-                          </div>
-                          <div className="w-auto p-1">
-                            <span>How to Use</span>
-                          </div>
-                        </div>
                       </button>
                     </div>
                   </div>
@@ -660,14 +752,14 @@ const Home = () => {
                 <input
                   type="text"
                   id="search-bar"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-4  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-4    "
                   placeholder="Search"
                 />
               </div>
               <button
                 type="button"
                 id="search-btn"
-                className="p-4 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="p-4 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-indigo-300 dark:focus:ring-blue-800"
               >
                 <svg
                   className="w-5 h-5"
@@ -685,8 +777,9 @@ const Home = () => {
                 </svg>
               </button>
               <button
-                id="filter-btn"
+                onClick={toggleSectionVisibility}
                 type="button"
+                id="filter-btn"
                 className="p-4 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 <svg
@@ -706,31 +799,156 @@ const Home = () => {
                 </svg>
               </button>
             </form>
+            {/* <div className="flex justify-center  items-center mt-[1rem] ">
+              <div className="relative w-3/5 ">
+                <input
+                  type="text"
+                  id="search-bar"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-4    "
+                  placeholder="Selected Filters:"
+                />
+              </div>
+            </div> */}
           </div>
-          <div className="filter-box">
-            <div id="years-box" className="filter-part text-lg">
-              <div className="filter-title">Year</div>
-              {[...Array(31).keys()].map((i) => (
-                <div className="filter-tags year-filter" key={1990 + i}>
-                  <p>{1990 + i}</p>
-                </div>
-              ))}
-            </div>
-            <div id="papers-box" className="filter-part text-lg">
-              <div className="filter-title">Paper</div>
-              <div className="paper-tags">
-                <p>Calculus</p>
-              </div>
-              <div className="paper-tags">
-                <p>Linear Algebra</p>
-              </div>
-              <div className="paper-tags">
-                <p>Analytical Geometry</p>
-              </div>
 
-            </div>
-          </div>
-          <div id="questions-list" />
+          {
+            <section
+              className="w-full max-w-6xl mx-auto px-4 m-4    border-2 bg-[#F9FAFB] "
+              style={{ display: isSectionVisible ? "block" : "none" }}
+            >
+              <div className="grid grid-flow-col  gap-5  m-6 filter-box">
+                <div
+                  id="years-box"
+                  className=" p-4 border-2 rounded-2xl   bg-[#D9D9D9] filter-part "
+                >
+                  <h1 className="text-3xl text-center filter-title">Year</h1>
+
+                  <div className="grid grid-rows-6 grid-flow-col gap-4 mt-4 ">
+                    {years.map((year) => (
+                      <button
+                        key={year}
+                        onClick={() => handleYearSelect(year)}
+                        className="bg-[#EAEAEA] filter-tags year-filter hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  "
+                      >
+                        {year}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="grid grid-rows-6 grid-flow-col gap-4 mt-4 ">
+                      <button
+                        onClick={() => handleSelectAllYears()}
+                        className="bg-[#EAEAEA] filter-tags year-filter hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  "
+                      >
+                        ALL YEARS
+                      </button>
+                  </div>
+                </div>
+                <aside
+                  id="papers-box"
+                  className="filter-part md:pt-0 p-2 border-2 rounded-2xl bg-[#D9D9D9] "
+                >
+                  <h1 className="text-3xl m-4 text-center filter-title">
+                    Topic
+                  </h1>
+
+                  <div className="grid grid-rows-5 grid-flow-col gap-3 m-6">
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full paper-tags"
+                      onClick={handleCALButtonClick}
+
+                    >
+                      Calculus
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  paper-tags"
+                      onClick={handleLAButtonClick}
+                    >
+                      Linear Algebra
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  paper-tags"
+                      onClick={handleAGButtonClick}
+                    >
+                      Analytical Geometry
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full paper-tags"
+                      onClick={handleODEButtonClick}
+                    >
+                      Ordinary Differential Equations
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full paper-tags"
+                      onClick={handleSdButtonClick}
+                    >
+                      Static & Dynamics
+                    </button>
+                  
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px]  disabled:opacity-25 cursor-not-allowed focus:outline-none"
+                      onClick={handleSdButtonClick}
+                    >
+                      Vector Analysis
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6  rounded-[15px]  cursor-not-allowed  "
+                      onClick={handleSdButtonClick}
+                    >
+                      Algebra
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6  rounded-[15px]  cursor-not-allowed "
+                      onClick={handleSdButtonClick}
+                    >
+                      Real Analysis
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6  rounded-[15px]  cursor-not-allowed "
+                      onClick={handleSdButtonClick}
+                    >
+                      Complex Analysis
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6  rounded-[15px] cursor-not-allowed  "
+                      onClick={handleSdButtonClick}
+                    >
+                      Linear Programming
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px] cursor-not-allowed  "
+                      onClick={handleSdButtonClick}
+                    >
+                      Partial D.E.
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px] cursor-not-allowed  "
+                      onClick={handleSdButtonClick}
+                    >
+                      Numerical Analysis
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px] cursor-not-allowed  "
+                      onClick={handleSdButtonClick}
+                    >
+                      Comp. Programming
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px]  cursor-not-allowed "
+                      onClick={handleSdButtonClick}
+                    >
+                      Mechanics
+                    </button>
+                    <button
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px]  cursor-not-allowed "
+                      onClick={handleSdButtonClick}
+                    >
+                      Fluid Dynamics
+                    </button>
+                  </div>
+                </aside>
+              </div>
+            </section>
+          }
           {showModal && (
             <div
               className="fixed top-0 left-0 h-screen w-screen flex items-center justify-center bg-gray-100"
@@ -786,7 +1004,6 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex flex-wrap justify-center items-center  mt-[1rem]">
-                 
                   <div className="w-auto p-1">
                     <span>Click Search to display all questions.</span>
                   </div>
@@ -800,16 +1017,30 @@ const Home = () => {
               </div>
             </div>
           )}
+          <div>
+          {odeData && renderData(odeData)}
 
-<footer class="p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-    © 2023 Lemon™. All Rights Reserved.
-  </span>
-  <div class="flex flex-wrap items-center justify-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-      <a target="_blank" href="https://www.meaditya.com" class="hover:underline" rel="noreferrer">Developed with ❤️ by Aditya K. ️</a>
-  </div>
-</footer>
-
+  {sdData && renderData(sdData)}
+  {agData && renderData(agData)}
+  {calData && renderData(calData)}
+  {laData && renderData(laData)}
+</div>
+   
+            <footer className="p-4 bg-white shadow md:flex md:items-center md:justify-between ">
+            <span className="text-sm text-gray-500 sm:text-center ">
+              © 2023 Lemon™. All Rights Reserved.
+            </span>
+            <div className="flex flex-wrap items-center justify-center mt-3 text-sm text-gray-500  sm:mt-0">
+              <a
+                target="_blank"
+                href="https://www.meaditya.com"
+                className="hover:underline"
+                rel="noreferrer"
+              >
+                Developed with ❤️ by Aditya K. ️
+              </a>
+            </div>
+          </footer>
         </div>
       </section>
     </>
