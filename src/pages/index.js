@@ -505,7 +505,6 @@ const Home = () => {
     );
   }
 
-
   const [selectedYears, setSelectedYears] = useState([]);
 
   const handleYearSelect = (year) => {
@@ -763,7 +762,6 @@ const Home = () => {
               </div>
               <button
                 type="button"
-                
                 id="search-btn"
                 className="p-4 ml-2 text-sm font-medium text-white bg-gray-800  rounded-lg border  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
               >
@@ -822,28 +820,31 @@ const Home = () => {
               className="w-full max-w-6xl mx-auto px-4 m-4    border-2 bg-[#F9FAFB] "
               style={{ display: isSectionVisible ? "block" : "none" }}
             >
-              <div className="grid grid-flow-col  gap-5  m-6 filter-box">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-4 filter-box">
                 <div
                   id="years-box"
                   className=" p-4 border-2 rounded-2xl   bg-[#D9D9D9] filter-part "
                 >
                   <h1 className="text-3xl text-center filter-title">Year</h1>
 
-                  <div className="grid grid-rows-6 grid-flow-col gap-4 mt-4 ">
+                  <div className="grid grid-rows-6 grid-cols-3 gap-4 mt-4 ">
                     {years.map((year) => (
                       <button
                         key={year}
                         onClick={() => handleYearSelect(year)}
-                        className="bg-[#EAEAEA] filter-tags year-filter hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  "
+                        className=" w-full text-md
+                        bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full filter-tags year-filter sm:py-1 sm:px-3 sm:text-md"
                       >
                         {year}
                       </button>
                     ))}
                   </div>
-                  <div className="grid grid-rows-6 grid-flow-col gap-4 mt-4 ">
+
+                  <div className="grid grid-rows-1 grid-flow-col gap-4 mt-4 ">
                     <button
                       onClick={() => handleSelectAllYears()}
-                      className="bg-[#EAEAEA] filter-tags year-filter hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  "
+                      className="w-full text-md
+                      bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full filter-tags year-filter sm:py-1 sm:px-3 sm:text-sm "
                     >
                       ALL YEARS
                     </button>
@@ -856,95 +857,94 @@ const Home = () => {
                   <h1 className="text-3xl m-4 text-center filter-title">
                     Topic
                   </h1>
-
-                  <div className="grid grid-rows-5 grid-flow-col gap-3 m-6">
+                  <div className="grid grid-rows-6 grid-cols-3 gap-4 mt-4 ">
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full paper-tags"
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm"
                       onClick={handleCALButtonClick}
                     >
                       Calculus
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  paper-tags"
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm"
                       onClick={handleLAButtonClick}
                     >
                       Linear Algebra
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  paper-tags"
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm"
                       onClick={handleAGButtonClick}
                     >
                       Analytical Geometry
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full paper-tags"
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm"
                       onClick={handleODEButtonClick}
                     >
                       Ordinary Differential Equations
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full paper-tags"
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm"
                       onClick={handleSdButtonClick}
                     >
                       Static & Dynamics
                     </button>
 
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px]  disabled:opacity-25 cursor-not-allowed focus:outline-none"
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm disabled:opacity-25 cursor-not-allowed focus:outline-none"
                       onClick={handleSdButtonClick}
                     >
                       Vector Analysis
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6  rounded-[15px]  cursor-not-allowed  "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Algebra
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6  rounded-[15px]  cursor-not-allowed "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed "
                       onClick={handleSdButtonClick}
                     >
                       Real Analysis
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6  rounded-[15px]  cursor-not-allowed "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed "
                       onClick={handleSdButtonClick}
                     >
                       Complex Analysis
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6  rounded-[15px] cursor-not-allowed  "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Linear Programming
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px] cursor-not-allowed  "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Partial D.E.
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px] cursor-not-allowed  "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Numerical Analysis
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px] cursor-not-allowed  "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Comp. Programming
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px]  cursor-not-allowed "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm  cursor-not-allowed "
                       onClick={handleSdButtonClick}
                     >
                       Mechanics
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px]  cursor-not-allowed "
+                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm  cursor-not-allowed "
                       onClick={handleSdButtonClick}
                     >
                       Fluid Dynamics
@@ -1033,11 +1033,14 @@ const Home = () => {
         </div>
       </section>
 
-      <footer className=" py-4  w-full">
-        <div className="container mx-auto flex justify-between">
-          <div>&copy; 2023 Lemon™. All Rights Reserved</div>
-
-          <div>Developed with ❤️ by Aditya K.</div>
+      <footer className="py-4 px-2 sm:px-4 w-full">
+        <div className="container mx-auto flex flex-col sm:flex-row justify-between">
+          <div className="text-center sm:text-left">
+            &copy; 2023 Lemon™. All Rights Reserved
+          </div>
+          <div className="text-center sm:text-right mt-2 sm:mt-0">
+            Developed with ❤️ by Aditya K.
+          </div>
         </div>
       </footer>
     </>
