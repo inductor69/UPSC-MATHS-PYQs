@@ -193,8 +193,6 @@ if (typeof window !== "undefined") {
         dataSize = data.AG.length;
         filterdata = data.AG;
         break;
-
- 
     }
     // console.log(dataSize);
     let ques = "";
@@ -307,7 +305,6 @@ if (typeof window !== "undefined") {
             case "Analytical Geometry":
               papercode = 3;
               break;
-
           }
         } else {
           item.state = 0;
@@ -457,7 +454,9 @@ const Home = () => {
     setOdeData(null);
   };
   const handleODEButtonClick = () => {
-    const odeData = data.ODE.filter((item) => item.Paper === "Ordinary Differential Equations");
+    const odeData = data.ODE.filter(
+      (item) => item.Paper === "Ordinary Differential Equations"
+    );
     setOdeData(odeData);
     setLaData(null);
     setAgData(null);
@@ -468,58 +467,68 @@ const Home = () => {
   function renderData(data) {
     return (
       <div>
-        {
-        data.filter((item) => selectedYears.includes(item.Year))
-      
-        .map((item) => (
-          <div key={item.Id}>
-    <div className="items-center px-2 md:px-4 sm:py-8 m-auto">
-      <div
-        className="flex flex-col sm:flex-row pb-3 justify-center space-y-4 sm:space-y-0 sm:space-x-1 xl:space-x-6 mx-8 sm:mx-0">
-        <div className="w-full p-2 lg:w-2/3 md:w-2/3 bg-[#D9D9D9]  rounded-md shadow-sm">
-          <div className="flex flex-col">
-            <div className="flex flex-row items-center justify-between px-4 py-2">
-              <div className="flex text-base text-gray-600">{`Year: ${item.Year}`}</div>
+        {data
+          .filter((item) => selectedYears.includes(item.Year))
 
-            </div>
-            <div className="px-4">
-              <button className="mt-1 text-xs px-2 py-1 text-gray-300 bg-gray-900">{item.Paper }</button>
-              <h2 className="my-3 font-bold text-xl text-gray-800"><Latex>{item.Question }</Latex></h2>
-              <div className="flex flex-row items-center justify-between w-full mb-2">
-                <div className="text-gray-800 font-medium text-sm">{`Marks: ${item.Marks}`}
+          .map((item) => (
+            <div key={item.Id}>
+              <div className="items-center px-2 md:px-4 sm:py-8 m-auto">
+                <div className="flex flex-col sm:flex-row pb-3 justify-center space-y-4 sm:space-y-0 sm:space-x-1 xl:space-x-6 mx-8 sm:mx-0">
+                  <div className="w-full p-2 lg:w-2/3 md:w-2/3 bg-[#D9D9D9]  rounded-md shadow-sm">
+                    <div className="flex flex-col">
+                      <div className="flex flex-row items-center justify-between px-4 py-2">
+                        <div className="flex text-base text-gray-600">{`Year: ${item.Year}`}</div>
+                      </div>
+                      <div className="px-4">
+                        <div
+                          className="mt-1 text-xs px-2 py-1 text-gray-300 bg-gray-900"
+                          style={{ display: "inline-block" }}
+                        >
+                          {item.Paper}
+                        </div>
+                        <h2 className="my-3 font-bold text-xl text-gray-800">
+                          <Latex>{item.Question}</Latex>
+                        </h2>
+                        <div className="flex flex-row items-center justify-between w-full mb-2">
+                          <div className="text-gray-800 font-medium text-md">
+                            {`Marks: ${item.Marks}`}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
               </div>
             </div>
-          </div>
-        </div>
-        </div>
-      </div>
-          </div>
-        ))}
+          ))}
       </div>
     );
   }
 
-const [selectedYears, setSelectedYears] = useState([]);
 
+  const [selectedYears, setSelectedYears] = useState([]);
 
-const handleYearSelect = (year) => {
-  setSelectedYears((prevYears) => {
-    const newYears = prevYears.includes(year)
-      ? prevYears.filter((y) => y !== year)
-      : [...prevYears, year];
-    return newYears;
-  });
-};
+  const handleYearSelect = (year) => {
+    setSelectedYears((prevYears) => {
+      const newYears = prevYears.includes(year)
+        ? prevYears.filter((y) => y !== year)
+        : [...prevYears, year];
+      return newYears;
+    });
+  };
 
-const handleSelectAllYears = () => {
-  const years = [];
-  for (let year = 1992; year <= 2019; year++) {
-    years.push(year);
-  }
-  setSelectedYears(years);
-};
+  const handleSelectAllYears = () => {
+    const years = [];
+    for (let year = 1992; year <= 2019; year++) {
+      years.push(year);
+    }
+
+    if (selectedYears.length === years.length) {
+      setSelectedYears([]);
+    } else {
+      setSelectedYears(years);
+    }
+  };
 
   return (
     <>
@@ -538,13 +547,12 @@ const handleSelectAllYears = () => {
       </Head>
 
       <div></div>
-      <section className="bg-blueGray-50">
+      <section className="bg-blueGray-50 mb-[6rem]">
         <div className="container mx-auto overflow-hidden">
           <div className="flex items-center justify-between px-4 py-5 bg-blueGray-50">
             <div className="w-auto">
               <div className="flex flex-wrap items-center">
-                <div className="w-auto mr-14">
-                </div>
+                <div className="w-auto mr-14"></div>
               </div>
             </div>
             <div className="w-auto">
@@ -585,7 +593,7 @@ const handleSelectAllYears = () => {
                 <div className="w-auto hidden lg:block">
                   <div className="inline-block">
                     <button
-                      className="py-3 px-7 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
+                      className="py-3 px-7 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-gray-800 transition ease-in-out duration-200"
                       type="button"
                     >
                       Login
@@ -706,7 +714,7 @@ const handleSelectAllYears = () => {
                   UPSC Maths Optional Previous Year Questions
                 </p>
 
-                <p className="mb-11 text-lg text-gray-900 font-medium  ">
+                <p className="mb-11 text-xl text-gray-900 font-medium  ">
                   Easily <b>find and filter</b> through PYQs of UPSC Maths
                   Optional
                 </p>
@@ -715,7 +723,7 @@ const handleSelectAllYears = () => {
                     <div className="block">
                       <button
                         onClick={handleClick}
-                        className="py-4 px-6 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
+                        className="py-4 px-6 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-black transition ease-in-out duration-200"
                         type="button"
                       >
                         Search Now
@@ -758,8 +766,9 @@ const handleSelectAllYears = () => {
               </div>
               <button
                 type="button"
+                
                 id="search-btn"
-                className="p-4 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-indigo-300 dark:focus:ring-blue-800"
+                className="p-4 ml-2 text-sm font-medium text-white bg-gray-800  rounded-lg border  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
               >
                 <svg
                   className="w-5 h-5"
@@ -780,7 +789,7 @@ const handleSelectAllYears = () => {
                 onClick={toggleSectionVisibility}
                 type="button"
                 id="filter-btn"
-                className="p-4 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="p-4 ml-2 text-sm font-medium text-white bg-gray-800  rounded-lg border  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
               >
                 <svg
                   className="w-5 h-5"
@@ -835,12 +844,12 @@ const handleSelectAllYears = () => {
                     ))}
                   </div>
                   <div className="grid grid-rows-6 grid-flow-col gap-4 mt-4 ">
-                      <button
-                        onClick={() => handleSelectAllYears()}
-                        className="bg-[#EAEAEA] filter-tags year-filter hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  "
-                      >
-                        ALL YEARS
-                      </button>
+                    <button
+                      onClick={() => handleSelectAllYears()}
+                      className="bg-[#EAEAEA] filter-tags year-filter hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full  "
+                    >
+                      ALL YEARS
+                    </button>
                   </div>
                 </div>
                 <aside
@@ -855,7 +864,6 @@ const handleSelectAllYears = () => {
                     <button
                       className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-full paper-tags"
                       onClick={handleCALButtonClick}
-
                     >
                       Calculus
                     </button>
@@ -883,7 +891,7 @@ const handleSelectAllYears = () => {
                     >
                       Static & Dynamics
                     </button>
-                  
+
                     <button
                       className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-6 rounded-[15px]  disabled:opacity-25 cursor-not-allowed focus:outline-none"
                       onClick={handleSdButtonClick}
@@ -1018,31 +1026,23 @@ const handleSelectAllYears = () => {
             </div>
           )}
           <div>
-          {odeData && renderData(odeData)}
+            {odeData && renderData(odeData)}
 
-  {sdData && renderData(sdData)}
-  {agData && renderData(agData)}
-  {calData && renderData(calData)}
-  {laData && renderData(laData)}
-</div>
-   
-            <footer className="p-4 bg-white shadow md:flex md:items-center md:justify-between ">
-            <span className="text-sm text-gray-500 sm:text-center ">
-              © 2023 Lemon™. All Rights Reserved.
-            </span>
-            <div className="flex flex-wrap items-center justify-center mt-3 text-sm text-gray-500  sm:mt-0">
-              <a
-                target="_blank"
-                href="https://www.meaditya.com"
-                className="hover:underline"
-                rel="noreferrer"
-              >
-                Developed with ❤️ by Aditya K. ️
-              </a>
-            </div>
-          </footer>
+            {sdData && renderData(sdData)}
+            {agData && renderData(agData)}
+            {calData && renderData(calData)}
+            {laData && renderData(laData)}
+          </div>
         </div>
       </section>
+
+      <footer className=" py-4  w-full">
+        <div className="container mx-auto flex justify-between">
+          <div>&copy; 2023 Lemon™. All Rights Reserved</div>
+
+          <div>Developed with ❤️ by Aditya K.</div>
+        </div>
+      </footer>
     </>
   );
 };
