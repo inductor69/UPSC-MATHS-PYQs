@@ -537,10 +537,7 @@ const Home = () => {
         <meta
           name="description"
           content={`
-          A ready-to-use starter template for building fast and modern web applications.
-          Includes basic configurations and optimizations for
-          optimal performance and development experience.
-        `}
+          Easily find and filter through PYQs of UPSC Maths Optional        `}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
