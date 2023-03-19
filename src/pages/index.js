@@ -2,245 +2,12 @@ import Head from "next/head";
 import { useRef, useState, useEffect } from "react";
 
 import "katex/dist/katex.min.css";
-import katex from "katex";
 
 import Latex from "react-latex";
 
-import ReactDOM from "react-dom";
 
 if (typeof window !== "undefined") {
-  function startsearch() {
-    fetch("upsc.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => searchQuestion(data));
-  }
-
-  const searchBar = document.getElementById("search-bar");
-
-  const searchbtn = document.getElementById("search-btn");
-  if (searchbtn) {
-    searchbtn.addEventListener("click", startsearch);
-  }
-
-  let yearfilter = [
-    {
-      year: 2020,
-      state: 0,
-    },
-    {
-      year: 2019,
-      state: 0,
-    },
-    {
-      year: 2018,
-      state: 0,
-    },
-    {
-      year: 2017,
-      state: 0,
-    },
-    {
-      year: 2016,
-      state: 0,
-    },
-    {
-      year: 2015,
-      state: 0,
-    },
-    {
-      year: 2014,
-      state: 0,
-    },
-    {
-      year: 2013,
-      state: 0,
-    },
-    {
-      year: 2012,
-      state: 0,
-    },
-    {
-      year: 2011,
-      state: 0,
-    },
-    {
-      year: 2010,
-      state: 0,
-    },
-    {
-      year: 2009,
-      state: 0,
-    },
-    {
-      year: 2008,
-      state: 0,
-    },
-    {
-      year: 2007,
-      state: 0,
-    },
-    {
-      year: 2006,
-      state: 0,
-    },
-    {
-      year: 2005,
-      state: 0,
-    },
-    {
-      year: 2004,
-      state: 0,
-    },
-    {
-      year: 2003,
-      state: 0,
-    },
-    {
-      year: 2002,
-      state: 0,
-    },
-    {
-      year: 2001,
-      state: 0,
-    },
-    {
-      year: 2000,
-      state: 0,
-    },
-    {
-      year: 1999,
-      state: 0,
-    },
-    {
-      year: 1998,
-      state: 0,
-    },
-    {
-      year: 1997,
-      state: 0,
-    },
-    {
-      year: 1996,
-      state: 0,
-    },
-    {
-      year: 1995,
-      state: 0,
-    },
-    {
-      year: 1994,
-      state: 0,
-    },
-    {
-      year: 1993,
-      state: 0,
-    },
-    {
-      year: 1992,
-      state: 0,
-    },
-    {
-      year: 1991,
-      state: 0,
-    },
-    {
-      year: 1990,
-      state: 0,
-    },
-  ];
-
-  // let filterswitch=0;
-
-  function checkfilterswitch() {
-    let n = 0;
-    yearfilter.forEach((y) => {
-      if (y.state) {
-        n = 1;
-      }
-    });
-    if (n) {
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-
-  //0: All 1:GS-I 2:GS-II 3:GS-III 4:GS-IV 5:Math
-  let papercode = 1;
-
-  function searchQuestion(data) {
-    removeQuestions();
-    let query = getQuery().toLowerCase();
-    let dataSize = 0;
-    let filterdata = [];
-    switch (papercode) {
-      case 1:
-        dataSize = data.CALCULUS.length;
-        filterdata = data.CALCULUS;
-        break;
-      case 2:
-        dataSize = data.LA.length;
-        filterdata = data.LA;
-        break;
-      case 3:
-        dataSize = data.AG.length;
-        filterdata = data.AG;
-        break;
-    }
-    // console.log(dataSize);
-    let ques = "";
-
-    for (let i = 0; i < dataSize; i++) {
-      ques = filterdata[i].Question.toLowerCase();
-      let n = ques.search(query);
-      if (n >= 0) {
-        // console.log(data.GSI[i].Question);
-        if (checkfilterswitch()) {
-          yearfilter.forEach((y) => {
-            if (y.state) {
-              if (y.year == filterdata[i].Year) {
-                displayQuestions(filterdata[i]);
-              }
-            }
-          });
-        } else {
-          displayQuestions(filterdata[i]);
-        }
-      }
-    }
-  }
-  function getQuery() {
-    return searchBar.value;
-    // console.log(searchBar.value);
-  }
-
-  // Execute a function when the user presses a key on the keyboard
-  if (searchBar) {
-    searchBar.addEventListener("keypress", function (event) {
-      // If the user presses the "Enter" key on the keyboard
-      if (event.key === "Enter") {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        // Trigger the button element with a click
-        searchbtn.click();
-      }
-    });
-  }
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      event.preventDefault();
-      removeQuestions();
-      // alert("Clicked!");
-    }
-  });
+  
 
   const filterbtn = document.getElementById("filter-btn");
   const filterbox = document.getElementsByClassName("filter-box");
@@ -256,32 +23,11 @@ if (typeof window !== "undefined") {
   filtertags.forEach((element) => {
     element.addEventListener("click", function () {
       element.classList.toggle("filter-tags-clicked");
-      yearfilter.forEach((y) => {
-        if (element.innerText == y.year) {
-          if (y.state) {
-            y.state = 0;
-          } else {
-            y.state = 1;
-          }
-        }
-      });
+    
     });
   });
 
-  let paperfilters = [
-    {
-      paper: "Calculus",
-      state: 0,
-    },
-    {
-      paper: "Linear Algebra",
-      state: 0,
-    },
-    {
-      paper: "Analytical Geometry",
-      state: 0,
-    },
-  ];
+
 
   papertags.forEach((element) => {
     element.addEventListener("click", function () {
@@ -292,95 +38,11 @@ if (typeof window !== "undefined") {
           item.classList.remove("paper-tags-clicked");
         }
       });
-      paperfilters.forEach((item) => {
-        if (item.paper == element.innerText) {
-          item.state = 0;
-          switch (item.paper) {
-            case "Calculus":
-              papercode = 1;
-              break;
-            case "Linear Algebra":
-              papercode = 2;
-              break;
-            case "Analytical Geometry":
-              papercode = 3;
-              break;
-          }
-        } else {
-          item.state = 0;
-        }
-      });
+      
     });
   });
 
-  const questionsList = document.getElementById("questions-list");
-  function displayQuestions(item) {
-    const questionBox = document.createElement("div");
-    questionBox.classList.add("question-box");
-    ReactDOM.render(
-      <div>
-        <p>
-          <Latex>{item.Question}</Latex>
-        </p>
-        <div className="qinfo">
-          <div className="qinfo-items">Paper: {item.Paper}</div>
-          <div className="qinfo-items">Year: {item.Year}</div>
-          <div className="qinfo-items">Marks: {item.Marks}</div>
-        </div>
-      </div>,
-      questionBox
-    );
-
-    questionsList.appendChild(questionBox);
-
-    let qinfoBox = document.querySelectorAll(".qinfo");
-  }
-
-  function removeQuestions() {
-    let t = questionsList.childElementCount;
-    for (var i = 0; i < t; i++) {
-      questionsList.removeChild(questionsList.children[0]);
-    }
-  }
-
-  function copyquestion(element) {
-    // alert(element.dataset.question);
-    // navigator.clipboard.writeText(element.dataset.question);
-    copyText(element.dataset.question);
-    element.innerText = "Copied";
-  }
-
-  function copyText(textToCopy) {
-    this.copied = false;
-
-    // Create textarea element
-    const textarea = document.createElement("textarea");
-
-    // Set the value of the text
-    textarea.value = textToCopy;
-
-    // Make sure we cant change the text of the textarea
-    textarea.setAttribute("readonly", "");
-
-    // Hide the textarea off the screnn
-    textarea.style.position = "absolute";
-    textarea.style.left = "-9999px";
-
-    // Add the textarea to the page
-    document.body.appendChild(textarea);
-
-    // Copy the textarea
-    textarea.select();
-
-    try {
-      var successful = document.execCommand("copy");
-      this.copied = true;
-    } catch (err) {
-      this.copied = false;
-    }
-
-    textarea.remove();
-  }
+ 
 }
 
 const Home = () => {
@@ -463,6 +125,153 @@ const Home = () => {
     setCalData(null);
     setSdData(null);
   };
+
+  const toggleSection = () => {
+    if (isSectionVisible) {
+      setIsSectionVisible(false);
+    }
+  };
+
+
+  function SearchQuestions({ data }) {
+    const [searchQuery, setSearchQuery] = useState("");
+    const [filteredData, setFilteredData] = useState([]);
+
+    const handleSearchInputChange = (event) => {
+      setSearchQuery(event.target.value);
+    };
+    const handleSearchButtonClick = () => {
+      const searchResult = searchQuestions(data, searchQuery);
+      setFilteredData(searchResult);
+    };
+    const searchQuestions = (data, query) => {
+      const papers = Object.keys(data);
+      let result = [];
+      papers.forEach((paper) => {
+        const paperQuestions = data[paper];
+        const filteredQuestions = paperQuestions.filter((question) => {
+          return question.Question.toLowerCase().includes(query.toLowerCase());
+        });
+        result = result.concat(filteredQuestions);
+      });
+      return result;
+    };
+
+    console.log(filteredData);
+    
+    return (
+      <>
+        <div className="searchBox flex">
+          <div className="relative flex-1 mr-2">
+            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="search-bar"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-4"
+              placeholder="Search"
+              value={searchQuery}
+              onChange={handleSearchInputChange}
+            />
+          </div>
+          <button
+            type="button"
+            id="search-btn"
+            className="p-4 text-sm font-medium text-white bg-gray-800 rounded-lg border hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+            onClick={() => {
+              handleSearchButtonClick();
+              toggleSection();
+            }}
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={toggleSectionVisibility}
+            type="button"
+            id="filter-btn"
+            className="p-4 ml-2 text-sm font-medium text-white bg-gray-800  rounded-lg border  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div>
+        {filteredData.map((question) => (
+              <div key={question.Id}>
+                <div className="items-center px-2 md:px-4 sm:py-8 m-auto">
+                  <div className="flex flex-col sm:flex-row pb-3 justify-center space-y-4 sm:space-y-0 sm:space-x-1 xl:space-x-6 mx-8 sm:mx-0">
+                    <div className="w-full p-2  bg-[#D9D9D9]  rounded-md shadow-sm">
+                      <div className="flex flex-col">
+                        <div className="flex flex-row items-center justify-between px-4 py-2">
+                          <div className="flex text-base text-gray-600">{`Year: ${question.Year}`}</div>
+                        </div>
+                        <div className="px-4">
+                          <div
+                            className="mt-1 text-xs px-2 py-1 text-gray-300 bg-gray-900"
+                            style={{ display: "inline-block" }}
+                          >
+                            {question.Paper}
+                          </div>
+                          <h2 className="my-3 font-bold text-xl text-gray-800">
+                            <Latex>{question.Question}</Latex>
+                          </h2>
+                          <div className="flex flex-row items-center justify-between w-full mb-2">
+                            <div className="text-gray-800 font-medium text-md">
+                              {`Marks: ${question.Marks}`}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </>
+    );
+  }
 
   function renderData(data) {
     return (
@@ -738,70 +547,8 @@ const Home = () => {
               </label>
 
               <div className="relative w-3/5 ">
-                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <svg
-                    aria-hidden="true"
-                    className="w-5 h-5 text-gray-500 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <input
-                  type="text"
-                  id="search-bar"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-4    "
-                  placeholder="Search"
-                />
+                {data && <SearchQuestions data={data} />}
               </div>
-              <button
-                type="button"
-                id="search-btn"
-                className="p-4 ml-2 text-sm font-medium text-white bg-gray-800  rounded-lg border  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-              <button
-                onClick={toggleSectionVisibility}
-                type="button"
-                id="filter-btn"
-                className="p-4 ml-2 text-sm font-medium text-white bg-gray-800  rounded-lg border  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-              </button>
             </form>
             {/* <div className="flex justify-center  items-center mt-[1rem] ">
               <div className="relative w-3/5 ">
@@ -890,61 +637,61 @@ const Home = () => {
                     </button>
 
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm disabled:opacity-25 cursor-not-allowed focus:outline-none"
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm disabled:opacity-25 cursor-not-allowed focus:outline-none "
                       onClick={handleSdButtonClick}
                     >
                       Vector Analysis
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Algebra
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed "
                       onClick={handleSdButtonClick}
                     >
                       Real Analysis
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed "
                       onClick={handleSdButtonClick}
                     >
                       Complex Analysis
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Linear Programming
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Partial D.E.
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Numerical Analysis
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm cursor-not-allowed  "
                       onClick={handleSdButtonClick}
                     >
                       Comp. Programming
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm  cursor-not-allowed "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm  cursor-not-allowed "
                       onClick={handleSdButtonClick}
                     >
                       Mechanics
                     </button>
                     <button
-                      className="bg-[#EAEAEA] hover:bg-indigo-300 text-black font-bold py-2 px-4 md:px-6 rounded-full paper-tags sm:py-1 sm:px-3 sm:text-sm  cursor-not-allowed "
+                      className="bg-[#EAEAEA]  text-black font-bold py-2 px-4 md:px-6 rounded-[15px]  sm:py-1 sm:px-3 sm:text-sm  cursor-not-allowed "
                       onClick={handleSdButtonClick}
                     >
                       Fluid Dynamics
