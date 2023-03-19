@@ -781,15 +781,15 @@ const Home = () => {
       </section>
 
       <footer className="py-4 px-2 sm:px-4 w-full">
-        <div className="container mx-auto flex flex-col sm:flex-row justify-between">
-          <div className="text-center sm:text-left">
-            &copy; 2023 Lemon™. All Rights Reserved
-          </div>
-          <div className="text-center sm:text-right mt-2 sm:mt-0">
-            Developed with ❤️ by Aditya K.
-          </div>
-        </div>
-      </footer>
+  <div className="container mx-auto flex flex-col sm:flex-row justify-between">
+    <div className="text-center sm:text-left">
+      &copy; 2023 Lemon™. All Rights Reserved
+    </div>
+    <div className="text-center sm:text-right mt-2 sm:mt-0">
+      Developed with ❤️ by <a className="underline " href="https://meaditya.com" target="_blank" rel="noopener noreferrer">Aditya K.</a>
+    </div>
+  </div>
+</footer>
     </>
   );
 };
