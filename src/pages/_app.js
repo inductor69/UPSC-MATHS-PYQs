@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 import '../styles/main.scss';
 import { ThemeProvider } from "next-themes";
-
+import  { Analytics } from '@vercel/analytics/react'
+;
 
 const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -12,9 +13,8 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
 
   return (
-  // <ThemeProvider attribute="data-theme" defaultTheme="system">
-        <Component {...pageProps} />
-      // </ThemeProvider>
+        <><Component {...pageProps} /><Analytics /></>
+        
   )
 };
 
