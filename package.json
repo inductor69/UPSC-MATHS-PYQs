@@ -16,7 +16,7 @@
     "mathjax-full": "^3.2.2",
     "mathjax-react": "^2.0.1",
     "next": "^13.1.6",
-    "next-sitemap": "^3.1.49",
+    "next-sitemap": "^4.0.8",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
