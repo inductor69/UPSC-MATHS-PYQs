@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.15",
-    "@next/codemod": "^13.1.6",
+    "@next/codemod": "^13.4.2",
     "@vercel/analytics": "^1.0.0",
     "mathjax-full": "^3.2.2",
     "mathjax-react": "^2.0.1",
